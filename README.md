@@ -14,7 +14,7 @@ The script intentionally avoids standard tooling and instead:
 - Implements attention, MLP, layer norm, and causal masking manually
 - Handles **messy / inconsistent checkpoint key names** with robust fallback logic
 
-The goal of this project is not production usage, but exploration, learning, and solving a very specific constraint: running GPT-2 style models when standard tooling is unavailable or undesirable. It was a deeply educational experience, and I'm sharing it here in case others find it useful or interesting.
+It was a deeply educational experience, and I'm sharing it here in case others find it useful or interesting.
 
 ---
 
