@@ -6,7 +6,7 @@ This repository contains a **minimal GPT-2 inference implementation written dire
 
 ## Why i made this script
 
-Most GPT-2 examples rely heavily on the `transformers` library, which hides a lot of the underlying mechanics. This project started when I wanted to run a GPT-2 model locally but couldn't install Transformers on my outdated system. Rather than give up, I built a pure PyTorch inference script from scratch.
+Most GPT-2 examples rely heavily on the `transformers`, which hides a lot of the underlying mechanics. This started when I wanted to run a GPT-2 model locally but couldn't install Transformers on my outdated system. Rather than give up, I built a pure PyTorch inference script from scratch.
 
 The script intentionally avoids standard tooling and instead:
 - Loads raw PyTorch checkpoints (`.pt` / `.bin`)
