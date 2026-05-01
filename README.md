@@ -2,37 +2,19 @@
 
 This repository contains a **minimal GPT-2 inference implementation written directly in PyTorch**, without using HuggingFace Transformers, safetensors, or high-level model wrappers.
 
-The goal of this project is **not production usage**, but exploration, learning, and solving a very specific constraint:
-> *Running GPT-2 style models when standard tooling is unavailable or undesirable.*
-
 ---
 
-## Why this exists
+## Why i made this script
 
-Most GPT-2 examples rely heavily on `transformers`, which hides a lot of the underlying mechanics.
-This script intentionally avoids that and instead:
+Most GPT-2 examples rely heavily on the `transformers` library, which hides a lot of the underlying mechanics. This project started when I wanted to run a GPT-2 model locally but couldn't install Transformers on my outdated system. Rather than give up, I built a pure PyTorch inference script from scratch.
 
+The script intentionally avoids standard tooling and instead:
 - Loads raw PyTorch checkpoints (`.pt` / `.bin`)
 - Implements a **byte-level BPE tokenizer** (GPT-2 style)
 - Implements attention, MLP, layer norm, and causal masking manually
 - Handles **messy / inconsistent checkpoint key names** with robust fallback logic
 
-Some of the solutions here are **not ideal**, and that’s intentional.
-They solve a *specific* problem under *specific constraints*.
-
----
-
-## What this is
-- Educational
-- Experimental
-- Debug-friendly
-- Useful when you want to understand or bypass higher-level tooling
-
-## What this is NOT
-- Production-ready
-- Optimized
-- Feature-complete
-- Intended to replace Transformers
+The goal of this project is not production usage, but exploration, learning, and solving a very specific constraint: running GPT-2 style models when standard tooling is unavailable or undesirable. It was a deeply educational experience, and I'm sharing it here in case others find it useful or interesting.
 
 ---
 
@@ -80,8 +62,6 @@ Key matching is intentionally flexible to support differently-named state_dicts
 
 ## Disclaimer
 
-This project exists to solve a specific technical constraint, not to demonstrate best practices.
-Some design choices are deliberately pragmatic rather than clean.
-
+This is not intended to replace Transformers.
 If you’re looking for production inference: use Transformers.
 If you want to see how things actually work under the hood: this repo may be useful.
